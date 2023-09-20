@@ -12,8 +12,11 @@ function fetchCats() {
 function renderCats(cat) {
     const catCard = document.getElementById('cat-card')
 
+    const catName = document.createElement('h3')
+    catName.innerText = cat.name
+
     const img = document.createElement('img')
     img.src = cat.image
 
-    catCard.append(img)
+    catCard.append(img, catName)
 }
