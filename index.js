@@ -18,5 +18,8 @@ function renderCats(cat) {
     const img = document.createElement('img')
     img.src = cat.image
 
-    catCard.append(img, catName)
+    const p = document.createElement('p')
+    p.innerText = `${cat.likes} likes`
+
+    catCard.append(img, catName, p)
 }
