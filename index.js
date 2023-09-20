@@ -12,6 +12,7 @@ function fetchCats() {
 function renderCats(cat) {
     const catCard = document.getElementById('cat-card')
 
+    //creating elements
     const catName = document.createElement('h3')
     catName.innerText = cat.name
 
@@ -21,9 +22,15 @@ function renderCats(cat) {
     const p = document.createElement('p')
     p.innerText = `${cat.likes} likes`
 
+    //create likeBtn
+    //add click eventListener to likeBtn
+    //increases likes on each click
     const likeBtn = document.createElement('button')
     likeBtn.innerText = 'Like'
-    likeBtn.addEventListener('click', () => console.log('click'))
+    likeBtn.addEventListener('click', () => {
+        cat.likes ++
+        p.innerText = cat.likes
+    })
 
     catCard.append(catName, likeBtn, p, img)
 }
