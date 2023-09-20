@@ -23,7 +23,7 @@ function renderCats(cat) {
 
     const likeBtn = document.createElement('button')
     likeBtn.innerText = 'Like'
-
+    likeBtn.addEventListener('click', () => console.log('click'))
 
     catCard.append(catName, likeBtn, p, img)
 }
