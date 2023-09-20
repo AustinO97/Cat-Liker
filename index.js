@@ -30,7 +30,21 @@ function renderCats(cat) {
     likeBtn.addEventListener('click', () => {
         cat.likes ++
         p.innerText = cat.likes
+        updateCatLikes(cat)
     })
-
+    //append elements to the DOM
     catCard.append(catName, likeBtn, p, img)
 }
+
+//updates db.json file with the the current likes
+function updateCatLikes(cat) {
+    const catLikes = cat.likes
+    fetch(`http://localhost:3000/cats/${catLikes}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+        },
+        body: JSON.stringify({likes: catLikes})
+    })
+} 
