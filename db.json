@@ -4,31 +4,31 @@
       "id": 1,
       "name": "stretch",
       "image": "https://images.pexels.com/photos/3643714/pexels-photo-3643714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 1
+      "likes": 5
     },
     {
       "id": 2,
       "name": "king",
       "image": "https://images.pexels.com/photos/1314550/pexels-photo-1314550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 2
+      "likes": 0
     },
     {
       "id": 3,
       "name": "sleepy",
       "image": "https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 3
+      "likes": 2
     },
     {
       "id": 4,
       "name": "swimming",
       "image": "https://images.pexels.com/photos/248280/pexels-photo-248280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 4
+      "likes": 3
     },
     {
       "id": 5,
       "name": "cozy",
       "image": "https://images.pexels.com/photos/236606/pexels-photo-236606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 5
+      "likes": 13
     }
   ]
 }

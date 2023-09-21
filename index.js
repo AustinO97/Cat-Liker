@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(cats) {
     fetchCats()
 })
+
 
 //fetch cats using forEach
 function fetchCats() {
@@ -9,42 +10,44 @@ function fetchCats() {
         .then(data => data.forEach(renderCats))
 }
 //render each cat and append it to the page
-function renderCats(cat) {
+function renderCats(cats) {
     const catCard = document.getElementById('cat-card')
+    
 
     //creating elements
     const catName = document.createElement('h3')
-    catName.innerText = cat.name
+    catName.innerText = cats.name
 
     const img = document.createElement('img')
-    img.src = cat.image
+    img.src = cats.image
 
     const p = document.createElement('p')
-    p.innerText = `${cat.likes} likes`
+    p.innerText = `${cats.likes} likes`
 
     //create likeBtn
     //add click eventListener to likeBtn
     //increases likes on each click
     const likeBtn = document.createElement('button')
-    likeBtn.innerText = 'Like'
+    likeBtn.innerText = 'Like' 
     likeBtn.addEventListener('click', () => {
-        cat.likes ++
-        p.innerText = cat.likes
-        updateCatLikes(cat)
+        cats.likes ++
+        p.textContent = cats.likes
+        updateCatLikes(cats)
     })
     //append elements to the DOM
     catCard.append(catName, likeBtn, p, img)
 }
 
 //updates db.json file with the the current likes
-function updateCatLikes(cat) {
-    const catLikes = cat.likes
-    fetch(`http://localhost:3000/cats/${catLikes}`, {
+function updateCatLikes(cats) {
+    let likes = cats.likes
+    console.log(likes);
+    fetch(`http://localhost:3000/cats/${cats.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json'
         },
-        body: JSON.stringify({likes: catLikes})
+        body: JSON.stringify({likes: likes})
     })
 } 
