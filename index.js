@@ -24,6 +24,11 @@ function renderCats(cats) {
     const p = document.createElement('p')
     p.innerText = `${cats.likes} likes`
 
+    const input = document.createElement('input')
+    input.setAttribute('type', 'new-comment')
+    input.setAttribute('type', 'text')
+    input.setAttribute('placeholder', 'Add Comment')
+
 
     //create commentForm 
     //add submit eventListener to commentForm
@@ -42,7 +47,7 @@ function renderCats(cats) {
     })
     //append elements to the DOM
     catCard.append(catName, commentform, likeBtn, p, img)
-
+    commentform.append(input)
 }
 
 
