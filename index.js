@@ -24,6 +24,12 @@ function renderCats(cats) {
     const p = document.createElement('p')
     p.innerText = `${cats.likes} likes`
 
+
+    const commentform = document.createElement('comment-form')
+    commentform.addEventListener('submit', (e) => {
+        createComment(e)
+    })
+
     //create likeBtn
     //add click eventListener to likeBtn
     //increases likes on each click
@@ -35,7 +41,7 @@ function renderCats(cats) {
         updateCatLikes(cats)
     })
     //append elements to the DOM
-    catCard.append(catName, likeBtn, p, img)
+    catCard.append(catName, likeBtn, p, commentform, img)
 }
 
 //updates db.json file with the the current likes
