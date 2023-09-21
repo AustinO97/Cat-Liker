@@ -4,13 +4,13 @@
       "id": 1,
       "name": "stretch",
       "image": "https://images.pexels.com/photos/3643714/pexels-photo-3643714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 5
+      "likes": 16
     },
     {
       "id": 2,
       "name": "king",
       "image": "https://images.pexels.com/photos/1314550/pexels-photo-1314550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "likes": 0
+      "likes": 4
     },
     {
       "id": 3,
