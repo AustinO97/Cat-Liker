@@ -38,6 +38,8 @@ function renderCats(cats) {
     const comments = document.createElement('div')
     comments.setAttribute('id', 'comments')
 
+    const commentContainer = document.createElement('div')
+    commentContainer.setAttribute('id', 'comment-container')
 
     //create commentForm 
     //add submit eventListener to commentForm
