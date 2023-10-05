@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(cats) {
+document.addEventListener('DOMContentLoaded', function() {
     fetchCats()
 })
 
@@ -25,15 +25,30 @@ function renderCats(cats) {
     p.innerText = `${cats.likes} likes`
 
     const input = document.createElement('input')
-    input.setAttribute('type', 'new-comment')
+    input.setAttribute('id', 'new-comment')
     input.setAttribute('type', 'text')
     input.setAttribute('placeholder', 'Add Comment')
+
+    const inputSubmit = document.createElement('input')
+    inputSubmit.setAttribute('type', 'submit')
+    inputSubmit.setAttribute('class', 'submit')
+    inputSubmit.setAttribute('value', 'submit')
+
+
+    const comments = document.createElement('div')
+    comments.setAttribute('id', 'comments')
 
 
     //create commentForm 
     //add submit eventListener to commentForm
-    const commentform = document.createElement('comment-form')
-    commentform.addEventListener('submit', () => createComment)
+    const commentform = document.createElement('form')
+    commentform.setAttribute('id', 'comment-form')
+
+
+    commentform.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+    })
 
     //create likeBtn
     //add click eventListener to likeBtn
@@ -42,25 +57,24 @@ function renderCats(cats) {
     likeBtn.innerText = 'Like' 
     likeBtn.addEventListener('click', () => {
         cats.likes ++
-        p.textContent = cats.likes
+        p.innerText = cats.likes + ' likes'
         updateCatLikes(cats)
+        
     })
+
     //append elements to the DOM
-    catCard.append(catName, commentform, likeBtn, p, img)
-    commentform.append(input)
+    catCard.append(catName, comments, likeBtn, p, img)
+    comments.append(commentform)
+    commentform.append(input, inputSubmit)
+
 }
 
 
-function createComment(e) {
-    e.preventDefault()
-    console.log(e.target);
-}
 
 
 //updates db.json file with the the current likes
 function updateCatLikes(cats) {
     let likes = cats.likes
-    console.log(likes);
     fetch(`http://localhost:3000/cats/${cats.id}`, {
         method: 'PATCH',
         headers: {
