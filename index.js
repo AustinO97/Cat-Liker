@@ -66,18 +66,14 @@ function renderCats(cats) {
         cats.likes ++
         p.innerText = cats.likes + ' likes'
         updateCatLikes(cats)
-        
     })
-
+    cats.likes = ''
     //append elements to the DOM
     catCard.append(catName, comments, likeBtn, p, img)
     comments.append(commentform, commentContainer)
     commentform.append(input, inputSubmit)
     commentContainer.appendChild(pText)
 }
-
-
-
 
 //updates db.json file with the the current likes
 function updateCatLikes(cats) {
