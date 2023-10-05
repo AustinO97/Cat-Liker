@@ -54,7 +54,7 @@ function renderCats(cats) {
         e.preventDefault()
         const userInput = e.target.querySelector('#new-comment')
         pText.innerText = userInput.value
-
+        userInput.value = ''
     })
 
     //create likeBtn
