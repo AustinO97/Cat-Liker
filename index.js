@@ -52,6 +52,8 @@ function renderCats(cats) {
 
     commentform.addEventListener('submit', (e) => {
         e.preventDefault()
+        const userInput = e.target.querySelector('#new-comment')
+        pText.innerText = userInput.value
 
     })
 
