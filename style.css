@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+#cat-container {
+    padding: 1rem;
+    text-align: center;
+    display: inline-block;
+    margin: 2rem;
+}
+
+.like-btn {
+    position: relative;
+    background-color: rgb(105, 105, 240);
+    border: none;
+    border-radius: 5px;
+    height: 1.5rem;
+    color: whitesmoke;
+    justify-self: center;
+}
+
+.like-btn:hover {
+    background-color: whitesmoke;
+    border: rgb(105, 105, 240) 1px;
+    color: rgb(105, 105, 240);
+}
+
+.submit {
+    position: relative;
+    background-color: rgb(105, 105, 240);
+    border-radius: 5px;
+    color: whitesmoke;
+    justify-self: center;
+    margin: 3px;
+}
+
+.submit:hover {
+    background-color: whitesmoke;
+    border: rgb(105, 105, 240);
+    color: rgb(105, 105, 240);
+}
