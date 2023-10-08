@@ -29,6 +29,12 @@
       "name": "cozy",
       "image": "https://images.pexels.com/photos/236606/pexels-photo-236606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "likes": 0
+    },
+    {
+      "name": "jim",
+      "image": "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "likes": 0,
+      "id": 6
     }
   ]
 }

@@ -5,13 +5,13 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: justify;
     margin: 2rem;
 }
 
-#cat-container {
+#cat-card {
     padding: 1rem;
-    text-align: center;
+    text-align: justify;
     display: inline-block;
     margin: 2rem;
 }
@@ -44,5 +44,21 @@ h1 {
 .submit:hover {
     background-color: whitesmoke;
     border: rgb(105, 105, 240);
+    color: rgb(105, 105, 240);
+}
+
+.is-cute-btn {
+    position: relative;
+    background-color: rgb(105, 105, 240);
+    border: none;
+    border-radius: 5px;
+    height: 1.5rem;
+    color: whitesmoke;
+    justify-self: center;
+}
+
+.is-cute-btn:hover {
+    background-color: whitesmoke;
+    border: rgb(105, 105, 240) 1px;
     color: rgb(105, 105, 240);
 }
