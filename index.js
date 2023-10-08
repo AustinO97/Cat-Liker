@@ -89,3 +89,11 @@ function addNewCat(cat) {
     .then(res => res.json())
     .then(data => renderCats(data))
 } 
+
+const catForm = document.querySelector('.new-cat-form')
+catForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    addNewCat(e.target)
+    document.querySelector('.input-text').value = ''
+    document.querySelector('.input-text-2').value = ''
+})
