@@ -72,3 +72,20 @@ function renderCats(cats) {
     catCard.append(catName, commentform, commentContainer, isCuteBtn, likeBtn, p, img)
     commentform.append(input, inputSubmit)
 }
+
+function addNewCat(cat) {
+    fetch(`http://localhost:3000/cats`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+        },
+        body: JSON.stringify({
+            'name': cat.name.value,
+            'image': cat.image.value,
+            'likes': 0
+        })
+    })
+    .then(res => res.json())
+    .then(data => renderCats(data))
+} 
